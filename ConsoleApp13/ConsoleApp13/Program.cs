@@ -40,7 +40,7 @@ namespace ConsoleApp13
         {
             while (true) 
             {
-                Console.WriteLine("1) Ввести X.\n2)Выход.");
+                Console.WriteLine("1) Вывести значения функции.\n2)Выход.");
                 string n = Console.ReadLine();
                 bool end = false; ;
                 if (CheckForInt(n)) 
@@ -53,19 +53,19 @@ namespace ConsoleApp13
                                     double b = a;
                                     if (b >= -7 && b < -3)
                                     {
-                                        Console.WriteLine($"Значение функции: f({a:0.0})={fun1(b):0.00}\n");
+                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun1(b):0.00}\n");
                                     }
                                     else if (b >= -3 && b < -2)
                                     {
-                                        Console.WriteLine($"Значение функции: f({a:0.0})={fun2(b):0.00}\n");
+                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun2(b):0.00}\n");
                                     }
                                     else if (b >= -2 && b < 2)
                                     {
-                                        Console.WriteLine($"Значение функции: f({a:0.0})={fun3(b):0.00}\n");
+                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun3(b):0.00}\n");
                                     }
                                     else if (b >= 2 && b <= 4)
                                     {
-                                        Console.WriteLine($"Значение функции: f({a:0.0})={fun4(b):0.00}\n");
+                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun4(b):0.00}\n");
                                     }
                                     else
                                     {
