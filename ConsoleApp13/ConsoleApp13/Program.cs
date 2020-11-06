@@ -10,7 +10,7 @@ namespace ConsoleApp13
     {
         static bool CheckForDouble(String Num)
         {
-            return Num.All(x => Int32.TryParse(x.ToString(), out Int32 result) || x == ',' || x == '-');
+            return Num.All(x => Int32.TryParse(x.ToString(), out Int32 result) || x == ',' || x == '-' || x == '0');
         }
         static bool CheckForInt(String Num)
         {
@@ -38,7 +38,6 @@ namespace ConsoleApp13
         }
         static void Main(string[] args)
         {
-            String a;
             while (true) 
             {
                 Console.WriteLine("1) Ввести X.\n2)Выход.");
@@ -49,34 +48,29 @@ namespace ConsoleApp13
                     switch (Convert.ToInt32(n)) 
                     {
                         case 1:
-                            a = Console.ReadLine();
-                            if (CheckForDouble(a))
+                            for (double a = -7; a <= 4; a += 0.1)
                             {
-                                double b = Convert.ToDouble(a);
-                                if (b >= -7 && b < -3)
-                                {
-                                    Console.WriteLine($"Значение функции: {fun1(b)}");
-                                }
-                                else if (b >= -3 && b < -2)
-                                {
-                                    Console.WriteLine($"Значение функции: {fun2(b)}");
-                                }
-                                else if (b >= -2 && b < 2)
-                                {
-                                    Console.WriteLine($"Значение функции: {fun3(b)}");
-                                }
-                                else if (b >= 2 && b <= 4)
-                                {
-                                    Console.WriteLine($"Значение функции: {fun4(b)}");
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Введёное вами число не попадает в область определения функции.");
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine("Введите число или используйте запятую, а не точку");
+                                    double b = a;
+                                    if (b >= -7 && b < -3)
+                                    {
+                                        Console.WriteLine($"Значение функции: f({a:0.0})={fun1(b):0.00}\n");
+                                    }
+                                    else if (b >= -3 && b < -2)
+                                    {
+                                        Console.WriteLine($"Значение функции: f({a:0.0})={fun2(b):0.00}\n");
+                                    }
+                                    else if (b >= -2 && b < 2)
+                                    {
+                                        Console.WriteLine($"Значение функции: f({a:0.0})={fun3(b):0.00}\n");
+                                    }
+                                    else if (b >= 2 && b <= 4)
+                                    {
+                                        Console.WriteLine($"Значение функции: f({a:0.0})={fun4(b):0.00}\n");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Введёное вами число не попадает в область определения функции.");
+                                    }                                
                             }
                             break;
                         case 2:
