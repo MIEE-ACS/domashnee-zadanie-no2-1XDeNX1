@@ -48,25 +48,29 @@ namespace ConsoleApp13
                     switch (Convert.ToInt32(n)) 
                     {
                         case 1:
-                            for (double a = -7; a <= 4; a += 0.1)
+                            for (double a = -9; a <= 7; a += 0.1)
                             {
                                     double b = a;
                                     if (b >= -7 && b < -3)
                                     {
-                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun1(b):0.00}\n");
+                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun1(b):0.00}");
                                     }
                                     else if (b >= -3 && b < -2)
                                     {
-                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun2(b):0.00}\n");
+                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun2(b):0.00}");
                                     }
                                     else if (b >= -2 && b < 2)
                                     {
-                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun3(b):0.00}\n");
+                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun3(b):0.00}");
                                     }
                                     else if (b >= 2 && b <= 4)
                                     {
-                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun4(b):0.00}\n");
+                                        Console.WriteLine($"Значение функции: f({a:0.0}) = {fun4(b):0.00}");
                                     }
+                                    else if((b>=-9 && b< -7) || (b<=7 && b >= 4)) 
+                                    {
+                                    Console.WriteLine($"Значение функции: f({a:0.0}) = 0.00");
+                                }
                                     else
                                     {
                                         Console.WriteLine("Введёное вами число не попадает в область определения функции.");
